@@ -46,9 +46,11 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            if let selectedID = viewModel.selectedDisplayID {
-                Text("Capturing display: \(selectedID)")
-                // Screen capture view will go here
+            if viewModel.selectedDisplayID != nil {
+                CaptureView(pixelBuffer: viewModel.captureManager.currentFrame)
+                    .background(Color.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .padding()
             } else {
                 Text("Select a display to start capturing")
                     .foregroundColor(.secondary)
