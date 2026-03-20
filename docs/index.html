@@ -179,7 +179,7 @@
             width: 50%;
             justify-self: center;
         }
-        .screenshot-item img {
+        .screenshot-item > a > img {
             width: 100%;
             border-radius: var(--radius);
             border: 1px solid var(--border);
@@ -187,7 +187,7 @@
             cursor: zoom-in;
             transition: transform 0.2s;
         }
-        .screenshot-item img:hover {
+        .screenshot-item > a > img:hover {
             transform: scale(1.02);
         }
 
@@ -209,10 +209,13 @@
             justify-content: center;
         }
         .lightbox img {
+            width: auto;
+            height: auto;
             max-width: 90%;
             max-height: 90%;
             border-radius: var(--radius);
             box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            object-fit: contain;
         }
 
         @media (max-width: 768px) {
