@@ -11,6 +11,7 @@
 		149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */; };
 		52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */; };
 		64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C177D689D90D86B1CC4E32D /* SettingsView.swift */; };
+		969E56B6A0D9C06D5240D811 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */; };
 		A122A374E4D71C66A06ED4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538C7C9F004111D6FA199DD3 /* Assets.xcassets */; };
 		BC9995AF79AFDEA2B6B6DFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D692DEE6088D64B5B2CCB /* ContentView.swift */; };
 		CA46539421BA7286D4CE1643 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A40BF59BD99BAF81E17C0A /* CoreGraphics.framework */; };
@@ -46,6 +47,7 @@
 		9E4D692DEE6088D64B5B2CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8A40BF59BD99BAF81E17C0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsightApp.swift; sourceTree = "<group>"; };
+		C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenCaptureKit.framework; path = System/Library/Frameworks/ScreenCaptureKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,14 @@
 				43A12EBCB1472BD73BA0A0D2 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		56DA45A760356D0F8B94DF08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		688DC89498E629DE03B7966E /* Products */ = {
@@ -133,6 +143,7 @@
 				BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */,
 				71E360E1077D02C1A4C3359D /* Models */,
 				4DA175199AC8E1AE84F6331E /* Resources */,
+				56DA45A760356D0F8B94DF08 /* ViewModels */,
 				833E2D544C5E46290CF21141 /* Views */,
 			);
 			path = Outsight;
@@ -258,6 +269,7 @@
 				52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */,
 				13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */,
 				64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */,
+				969E56B6A0D9C06D5240D811 /* SidebarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

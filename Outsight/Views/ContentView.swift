@@ -1,27 +1,40 @@
 import SwiftUI
+import ScreenCaptureKit
 
 struct ContentView: View {
-    @State private var selection: String? = "None"
+    @StateObject private var viewModel = SidebarViewModel()
     
     var body: some View {
         NavigationSplitView {
-            SidebarView(selection: $selection)
+            SidebarView(viewModel: viewModel)
                 .navigationSplitViewColumnWidth(min: 200, ideal: 250)
         } detail: {
-            MainView(selection: $selection)
+            MainView(viewModel: viewModel)
         }
         .navigationTitle("Outsight")
+        .onAppear {
+            viewModel.refreshDisplays()
+        }
     }
 }
 
 struct SidebarView: View {
-    @Binding var selection: String?
+    @ObservedObject var viewModel: SidebarViewModel
     
     var body: some View {
-        List(selection: $selection) {
+        List(selection: $viewModel.selectedDisplayID) {
+            Section("System") {
+                Text("None").tag(nil as CGDirectDisplayID?)
+            }
+            
             Section("Displays") {
-                Text("None").tag("None")
-                // Displays will be added here
+                ForEach(viewModel.displays, id: \.displayID) { display in
+                    HStack {
+                        Image(systemName: "display")
+                        Text("Display \(display.displayID)")
+                    }
+                    .tag(display.displayID as CGDirectDisplayID?)
+                }
             }
         }
         .listStyle(.sidebar)
@@ -29,15 +42,16 @@ struct SidebarView: View {
 }
 
 struct MainView: View {
-    @Binding var selection: String?
+    @ObservedObject var viewModel: SidebarViewModel
     
     var body: some View {
         VStack {
-            if selection == "None" {
+            if let selectedID = viewModel.selectedDisplayID {
+                Text("Capturing display: \(selectedID)")
+                // Screen capture view will go here
+            } else {
                 Text("Select a display to start capturing")
                     .foregroundColor(.secondary)
-            } else {
-                Text("Capturing display: \(selection ?? "Unknown")")
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
