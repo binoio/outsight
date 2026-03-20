@@ -18,11 +18,11 @@ final class SidebarViewModelTests: XCTestCase {
     
     func testInitialState() {
         XCTAssertEqual(viewModel.displays.count, 0)
-        XCTAssertNil(viewModel.selectedDisplayID)
+        XCTAssertEqual(viewModel.selectedDisplayID, 0)
     }
     
-    func testHandleSelectionWithNil() {
-        viewModel.selectedDisplayID = nil
+    func testHandleSelectionWithNone() {
+        viewModel.selectedDisplayID = 0
         // captureManager should be stopped
         XCTAssertNotNil(viewModel.captureManager)
     }

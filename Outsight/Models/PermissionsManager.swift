@@ -2,54 +2,56 @@ import Foundation
 import ScreenCaptureKit
 import AVFoundation
 import CoreGraphics
-
 @MainActor
 class PermissionsManager: ObservableObject {
     @Published var isScreenRecordingAuthorized: Bool = false
-    @Published var isAudioRecordingAuthorized: Bool = false
-    
+
+    var hasInitialPermissions: Bool {
+        isScreenRecordingAuthorized
+    }
+
+    private var timer: Timer?
+
     init() {
         checkPermissions()
+        startPolling()
     }
-    
+
+    deinit {
+        timer?.invalidate()
+    }
+
     func checkPermissions() {
         isScreenRecordingAuthorized = CGPreflightScreenCaptureAccess()
-        isAudioRecordingAuthorized = AVCaptureDevice.authorizationStatus(for: .audio) == .authorized
     }
-    
+
+    func startPolling() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                self?.checkPermissions()
+            }
+        }
+    }
+
     func requestScreenRecordingPermission() {
-        // This will trigger the system prompt if not already authorized
         CGRequestScreenCaptureAccess()
-        // We need to poll or check again after some time because CGRequestScreenCaptureAccess is asynchronous and doesn't provide a callback
         checkPermissions()
     }
-    
-    func requestAudioRecordingPermission() async {
-        let authorized = await AVCaptureDevice.requestAccess(for: .audio)
-        isAudioRecordingAuthorized = authorized
-    }
-    
+
     func resetPermissions() {
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/bin/tccutil")
         process.arguments = ["reset", "ScreenCapture", "com.ralph.Outsight"]
-        
+
         do {
             try process.run()
             process.waitUntilExit()
-            
-            let audioProcess = Process()
-            audioProcess.executableURL = URL(fileURLWithPath: "/usr/bin/tccutil")
-            audioProcess.arguments = ["reset", "Microphone", "com.ralph.Outsight"]
-            try audioProcess.run()
-            audioProcess.waitUntilExit()
-            
             checkPermissions()
         } catch {
             print("Failed to reset permissions: \(error)")
         }
     }
-    
+
     func openSystemSettings() {
         let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture")!
         NSWorkspace.shared.open(url)

@@ -19,9 +19,8 @@ class CaptureManager: NSObject, SCStreamOutput, ObservableObject {
         config.minimumFrameInterval = CMTime(value: 1, timescale: 60)
         config.queueDepth = 5
         
-        // Request audio if needed
-        config.capturesAudio = true
-        config.excludesCurrentProcessAudio = false
+        // Audio not required
+        config.capturesAudio = false
         
         do {
             stream = SCStream(filter: contentFilter, configuration: config, delegate: nil)

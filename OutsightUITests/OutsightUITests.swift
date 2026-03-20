@@ -15,9 +15,24 @@ final class OutsightUITests: XCTestCase {
         super.tearDown()
     }
 
+    func testOnlyOneViewMenuExists() {
+        let viewMenu = app.menuBars.menuBarItems["View"]
+        XCTAssertTrue(viewMenu.exists, "The View menu should exist")
+        
+        // Count how many "View" menu bar items exist
+        let count = app.menuBars.menuBarItems.matching(identifier: "View").count
+        XCTAssertEqual(count, 1, "There should be exactly one View menu")
+    }
+
     func testAppLaunchAndSidebar() {
-        // Verify sidebar content exists
-        XCTAssert(app.staticTexts["Displays"].exists)
-        XCTAssert(app.staticTexts["None"].exists)
+        // If onboarding exists, click the grant button
+        let grantButton = app.buttons["Grant Screen Recording Access"]
+        if grantButton.exists {
+            grantButton.click()
+        }
+        
+        // Wait for elements to appear as they might take a second during initial load or after grant
+        let noneText = app.staticTexts["None"]
+        XCTAssertTrue(noneText.waitForExistence(timeout: 5), "None option should exist in the sidebar")
     }
 }

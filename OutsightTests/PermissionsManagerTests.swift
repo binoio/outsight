@@ -25,6 +25,5 @@ final class PermissionsManagerTests: XCTestCase {
         permissionsManager.checkPermissions()
         // status is dependent on the environment
         XCTAssertNotNil(permissionsManager.isScreenRecordingAuthorized)
-        XCTAssertNotNil(permissionsManager.isAudioRecordingAuthorized)
     }
 }

@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */; };
 		149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */; };
+		2061408226C33B6BF46A180F /* PIPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55511CCF5E5067E7E5E3F77 /* PIPManager.swift */; };
+		24D16CDBEEFB489196B0E1DE /* AppIconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FD658C8B9C9DF53267B28 /* AppIconTests.swift */; };
+		2DE42B3E6ECCF43B4DFF54C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79831FD30908A041188FE33 /* OnboardingView.swift */; };
 		52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */; };
 		64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C177D689D90D86B1CC4E32D /* SettingsView.swift */; };
 		7DE107B5783A630AD34A5459 /* OutsightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93985E123BB6698FA5C51D /* OutsightUITests.swift */; };
+		87BC7E2F9E49565AA4090B79 /* AppLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8B2B35B10B449DACC1D111 /* AppLoginManager.swift */; };
 		969E56B6A0D9C06D5240D811 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */; };
 		A122A374E4D71C66A06ED4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538C7C9F004111D6FA199DD3 /* Assets.xcassets */; };
 		A48C403AE0575E4C9F17D13F /* PermissionsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */; };
@@ -50,14 +54,18 @@
 		538C7C9F004111D6FA199DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53BFCBF49C520BC0BE2A374B /* Outsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C75918180273790BA623D8 /* OutsightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		633FD658C8B9C9DF53267B28 /* AppIconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTests.swift; sourceTree = "<group>"; };
 		6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
 		7C177D689D90D86B1CC4E32D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9E4D692DEE6088D64B5B2CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A55511CCF5E5067E7E5E3F77 /* PIPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPManager.swift; sourceTree = "<group>"; };
 		B8A40BF59BD99BAF81E17C0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsightApp.swift; sourceTree = "<group>"; };
 		BD42E179BDF337E742C2D317 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		C79831FD30908A041188FE33 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
+		EE8B2B35B10B449DACC1D111 /* AppLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginManager.swift; sourceTree = "<group>"; };
 		F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenCaptureKit.framework; path = System/Library/Frameworks/ScreenCaptureKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,6 +86,7 @@
 		272A1C6F70B6CA7D643B5955 /* OutsightTests */ = {
 			isa = PBXGroup;
 			children = (
+				633FD658C8B9C9DF53267B28 /* AppIconTests.swift */,
 				502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */,
 				6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */,
 			);
@@ -125,8 +134,10 @@
 		71E360E1077D02C1A4C3359D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE8B2B35B10B449DACC1D111 /* AppLoginManager.swift */,
 				32DF749A4CCDFB69F0F58DE2 /* CaptureManager.swift */,
 				7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */,
+				A55511CCF5E5067E7E5E3F77 /* PIPManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			children = (
 				BD42E179BDF337E742C2D317 /* CaptureView.swift */,
 				9E4D692DEE6088D64B5B2CCB /* ContentView.swift */,
+				C79831FD30908A041188FE33 /* OnboardingView.swift */,
 				7C177D689D90D86B1CC4E32D /* SettingsView.swift */,
 			);
 			path = Views;
@@ -280,10 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BC7E2F9E49565AA4090B79 /* AppLoginManager.swift in Sources */,
 				ED2E77235D6B316A39E67A40 /* CaptureManager.swift in Sources */,
 				FE38DCC9946FE88E72E45154 /* CaptureView.swift in Sources */,
 				BC9995AF79AFDEA2B6B6DFB1 /* ContentView.swift in Sources */,
+				2DE42B3E6ECCF43B4DFF54C6 /* OnboardingView.swift in Sources */,
 				52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */,
+				2061408226C33B6BF46A180F /* PIPManager.swift in Sources */,
 				13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */,
 				64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */,
 				969E56B6A0D9C06D5240D811 /* SidebarViewModel.swift in Sources */,
@@ -302,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D16CDBEEFB489196B0E1DE /* AppIconTests.swift in Sources */,
 				A48C403AE0575E4C9F17D13F /* PermissionsManagerTests.swift in Sources */,
 				AC1FEF682FCE990C9808575F /* SidebarViewModelTests.swift in Sources */,
 			);
