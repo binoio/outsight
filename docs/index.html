@@ -171,19 +171,60 @@
         }
         .screenshot-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
+        }
+        .screenshot-item:last-child {
+            grid-column: 1 / span 2;
+            width: 50%;
+            justify-self: center;
         }
         .screenshot-item img {
             width: 100%;
             border-radius: var(--radius);
             border: 1px solid var(--border);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+            transition: transform 0.2s;
         }
-        .screenshot-item p {
-            text-align: center;
-            color: var(--secondary);
-            margin-top: 15px;
+        .screenshot-item img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox effect */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            cursor: zoom-out;
+        }
+        .lightbox:target {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: var(--radius);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+            .screenshot-item:last-child {
+                grid-column: auto;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -223,19 +264,25 @@
         </section>
 
         <section class="screenshots">
-            <h2 style="text-align: center; margin-bottom: 40px;">See it in action</h2>
+            <h2 style="text-align: center; margin-bottom: 40px;">Screenshots</h2>
             <div class="screenshot-grid">
                 <div class="screenshot-item">
-                    <img src="images/main-window.png" alt="Main Window Screenshot">
-                    <p>Clean, native macOS interface.</p>
+                    <a href="#img1"><img src="images/main-window.png" alt="Main Window Screenshot"></a>
+                    <div id="img1" class="lightbox" onclick="location.href='#';">
+                        <img src="images/main-window.png">
+                    </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/secondary-display.png" alt="Secondary Display Screenshot">
-                    <p>Mirror any connected display.</p>
+                    <a href="#img2"><img src="images/secondary-display.png" alt="Secondary Display Screenshot"></a>
+                    <div id="img2" class="lightbox" onclick="location.href='#';">
+                        <img src="images/secondary-display.png">
+                    </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/app-settings.png" alt="App Settings Screenshot">
-                    <p>Simple and intuitive settings.</p>
+                    <a href="#img3"><img src="images/app-settings.png" alt="App Settings Screenshot"></a>
+                    <div id="img3" class="lightbox" onclick="location.href='#';">
+                        <img src="images/app-settings.png">
+                    </div>
                 </div>
             </div>
         </section>
