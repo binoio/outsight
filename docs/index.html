@@ -165,6 +165,26 @@
             h1 { font-size: 2.5rem; }
             .subtitle { font-size: 1.2rem; }
         }
+
+        .screenshots {
+            margin: 100px 0;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .screenshot-item img {
+            width: 100%;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .screenshot-item p {
+            text-align: center;
+            color: var(--secondary);
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -196,9 +216,27 @@
                 <p>Keep an eye on your screens in a floating window while you work.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🧭</span>
+                <span class="feature-icon">🖥️</span>
                 <h3>Multi-Display</h3>
                 <p>Toggle between all connected displays seamlessly from the sidebar.</p>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <h2 style="text-align: center; margin-bottom: 40px;">See it in action</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="images/main-window.png" alt="Main Window Screenshot">
+                    <p>Clean, native macOS interface.</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/secondary-display.png" alt="Secondary Display Screenshot">
+                    <p>Mirror any connected display.</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/app-settings.png" alt="App Settings Screenshot">
+                    <p>Simple and intuitive settings.</p>
+                </div>
             </div>
         </section>
 
