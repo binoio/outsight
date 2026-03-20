@@ -22,6 +22,8 @@ targets:
     type: bundle.unit-test
     platform: macOS
     sources: [OutsightTests]
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
     dependencies:
       - target: Outsight
 
@@ -29,5 +31,7 @@ targets:
     type: bundle.ui-testing
     platform: macOS
     sources: [OutsightUITests]
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
     dependencies:
       - target: Outsight

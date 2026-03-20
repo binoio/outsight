@@ -11,8 +11,11 @@
 		149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */; };
 		52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */; };
 		64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C177D689D90D86B1CC4E32D /* SettingsView.swift */; };
+		7DE107B5783A630AD34A5459 /* OutsightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93985E123BB6698FA5C51D /* OutsightUITests.swift */; };
 		969E56B6A0D9C06D5240D811 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */; };
 		A122A374E4D71C66A06ED4BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538C7C9F004111D6FA199DD3 /* Assets.xcassets */; };
+		A48C403AE0575E4C9F17D13F /* PermissionsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */; };
+		AC1FEF682FCE990C9808575F /* SidebarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */; };
 		BC9995AF79AFDEA2B6B6DFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D692DEE6088D64B5B2CCB /* ContentView.swift */; };
 		CA46539421BA7286D4CE1643 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A40BF59BD99BAF81E17C0A /* CoreGraphics.framework */; };
 		ED2E77235D6B316A39E67A40 /* CaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DF749A4CCDFB69F0F58DE2 /* CaptureManager.swift */; };
@@ -38,13 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E93985E123BB6698FA5C51D /* OutsightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsightUITests.swift; sourceTree = "<group>"; };
 		2C3CF4A8099BC0E1D40461AE /* OutsightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DF749A4CCDFB69F0F58DE2 /* CaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureManager.swift; sourceTree = "<group>"; };
 		410A7854BD05E831F87C7BE0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		43A12EBCB1472BD73BA0A0D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManagerTests.swift; sourceTree = "<group>"; };
 		538C7C9F004111D6FA199DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53BFCBF49C520BC0BE2A374B /* Outsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C75918180273790BA623D8 /* OutsightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModelTests.swift; sourceTree = "<group>"; };
 		7C177D689D90D86B1CC4E32D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9E4D692DEE6088D64B5B2CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 		272A1C6F70B6CA7D643B5955 /* OutsightTests */ = {
 			isa = PBXGroup;
 			children = (
+				502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */,
+				6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */,
 			);
 			path = OutsightTests;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 		ED5F7F9D095E46653AC74F95 /* OutsightUITests */ = {
 			isa = PBXGroup;
 			children = (
+				1E93985E123BB6698FA5C51D /* OutsightUITests.swift */,
 			);
 			path = OutsightUITests;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE107B5783A630AD34A5459 /* OutsightUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48C403AE0575E4C9F17D13F /* PermissionsManagerTests.swift in Sources */,
+				AC1FEF682FCE990C9808575F /* SidebarViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +328,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -332,6 +345,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,6 +424,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,6 +522,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
