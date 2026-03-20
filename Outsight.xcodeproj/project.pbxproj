@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */; };
 		149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */; };
 		52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */; };
 		64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C177D689D90D86B1CC4E32D /* SettingsView.swift */; };
@@ -41,6 +42,7 @@
 		53BFCBF49C520BC0BE2A374B /* Outsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C75918180273790BA623D8 /* OutsightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C177D689D90D86B1CC4E32D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsManager.swift; sourceTree = "<group>"; };
 		9E4D692DEE6088D64B5B2CCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8A40BF59BD99BAF81E17C0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsightApp.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		71E360E1077D02C1A4C3359D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		833E2D544C5E46290CF21141 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB5D6E4CABBA4DCBC62357D /* OutsightApp.swift */,
+				71E360E1077D02C1A4C3359D /* Models */,
 				4DA175199AC8E1AE84F6331E /* Resources */,
 				833E2D544C5E46290CF21141 /* Views */,
 			);
@@ -245,6 +256,7 @@
 			files = (
 				BC9995AF79AFDEA2B6B6DFB1 /* ContentView.swift in Sources */,
 				52B6D0A3B38F4299E59DB164 /* OutsightApp.swift in Sources */,
+				13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */,
 				64219A8C632EDCA864C01083 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

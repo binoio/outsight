@@ -1,23 +1,41 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject private var permissionsManager = PermissionsManager()
+    
     var body: some View {
         Form {
             Section("Permissions") {
                 HStack {
                     Text("Screen Recording Permission")
                     Spacer()
-                    Circle()
-                        .fill(Color.red)
-                        .frame(width: 10, height: 10)
+                    Image(systemName: permissionsManager.isScreenRecordingAuthorized ? "checkmark.circle.fill" : "xmark.circle.fill")
+                        .foregroundColor(permissionsManager.isScreenRecordingAuthorized ? .green : .red)
                 }
                 
-                Button("Reset Permissions") {
-                    // Action to reset permissions
+                HStack {
+                    Text("Audio Recording Permission")
+                    Spacer()
+                    Image(systemName: permissionsManager.isAudioRecordingAuthorized ? "checkmark.circle.fill" : "xmark.circle.fill")
+                        .foregroundColor(permissionsManager.isAudioRecordingAuthorized ? .green : .red)
+                }
+                
+                Button("Request Permissions") {
+                    permissionsManager.requestScreenRecordingPermission()
+                    Task {
+                        await permissionsManager.requestAudioRecordingPermission()
+                    }
+                }
+                
+                Button("Reset Permissions", role: .destructive) {
+                    permissionsManager.resetPermissions()
                 }
             }
         }
         .padding()
-        .frame(width: 350)
+        .frame(width: 400, height: 250)
+        .onAppear {
+            permissionsManager.checkPermissions()
+        }
     }
 }
