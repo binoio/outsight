@@ -27,6 +27,10 @@ struct SettingsView: View {
                     }
                 }
                 
+                Button("Open System Settings") {
+                    permissionsManager.openSystemSettings()
+                }
+                
                 Button("Reset Permissions", role: .destructive) {
                     permissionsManager.resetPermissions()
                 }

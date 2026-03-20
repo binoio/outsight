@@ -30,7 +30,6 @@ class PermissionsManager: ObservableObject {
     }
     
     func resetPermissions() {
-        // tccutil reset All com.ralph.Outsight
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/bin/tccutil")
         process.arguments = ["reset", "ScreenCapture", "com.ralph.Outsight"]
@@ -39,7 +38,6 @@ class PermissionsManager: ObservableObject {
             try process.run()
             process.waitUntilExit()
             
-            // Also reset audio
             let audioProcess = Process()
             audioProcess.executableURL = URL(fileURLWithPath: "/usr/bin/tccutil")
             audioProcess.arguments = ["reset", "Microphone", "com.ralph.Outsight"]
@@ -50,5 +48,10 @@ class PermissionsManager: ObservableObject {
         } catch {
             print("Failed to reset permissions: \(error)")
         }
+    }
+    
+    func openSystemSettings() {
+        let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture")!
+        NSWorkspace.shared.open(url)
     }
 }
