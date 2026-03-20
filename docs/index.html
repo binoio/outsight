@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outsight - Screen Capture for macOS</title>
+    <meta name="description" content="A minimalist macOS screen capture utility with Picture-in-Picture and multi-display support.">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1d1d1f;
+            --secondary: #86868b;
+            --accent: #0071e3;
+            --card-bg: #f5f5f7;
+            --border: #d2d2d7;
+            --radius: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --fg: #f5f5f7;
+                --secondary: #86868b;
+                --accent: #0071e3;
+                --card-bg: #1c1c1e;
+                --border: #38383a;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 0 60px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 0 0 20px;
+            letter-spacing: -0.015em;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .cta:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .cta:active {
+            transform: scale(0.98);
+        }
+
+        .version-info {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: var(--secondary);
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">
+                <img src="icon.png" alt="Outsight Logo">
+                Outsight
+            </a>
+            <a href="https://github.com/binoio/outsight" class="cta" style="background: none; color: var(--accent); padding: 0;">GitHub</a>
+        </nav>
+
+        <header>
+            <h1>Outsight</h1>
+            <p class="subtitle">The smartest way to monitor your screens on macOS. Ultra-low latency, PIP, and multi-display support.</p>
+            <a href="https://github.com/binoio/outsight/releases/latest/download/Outsight.app.zip" class="cta">Download for macOS</a>
+            <span class="version-info">Requires macOS 13.0 or later</span>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <span class="feature-icon">📺</span>
+                <h3>Live Screen Capture</h3>
+                <p>Monitor any display with ultra-low latency and minimal CPU usage.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🖼️</span>
+                <h3>Picture-in-Picture</h3>
+                <p>Keep an eye on your screens in a floating window while you work.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧭</span>
+                <h3>Multi-Display</h3>
+                <p>Toggle between all connected displays seamlessly from the sidebar.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Outsight. Built with ❤️ for macOS.</p>
+            <p>Released under the MIT License. <a href="https://github.com/binoio/outsight">View on GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
