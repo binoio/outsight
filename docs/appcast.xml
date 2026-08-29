@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Outsight</title>
+        <item>
+            <title>1.1.0</title>
+            <pubDate>Fri, 28 Aug 2026 20:04:30 -0400</pubDate>
+            <sparkle:version>1.1.0</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h2>Outsight 1.1.0</h2>
+<h3>Automatic updates</h3>
+<ul>
+  <li>Outsight now updates itself via Sparkle. Check manually with <b>Outsight ▸ Check for Updates…</b>, or manage automatic checks and downloads in <b>Settings ▸ Updates</b>.</li>
+</ul>
+<h3>Under the hood</h3>
+<ul>
+  <li>Replaced the ship-it submodule with self-contained build, test, run, and release scripts (<code>Scripts/</code>).</li>
+  <li>App notarization now uses Apple's App Store Connect API (<code>notarytool</code>) with EdDSA-signed Sparkle update appcasts.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/binoio/outsight/releases/download/v1.1.0/Outsight-1.1.0.zip" length="1521520" type="application/octet-stream" sparkle:edSignature="XFgI2YZMZay12KQkBdP7ojBHU5jq1bX4qxCpGwW2bTHt/CRz75xfuFgpujwe+l1tZuqIpVuNV3sLp/s5gjPsAA=="/>
+        </item>
+    </channel>
+</rss>
