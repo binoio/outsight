@@ -1,52 +1,30 @@
 # Xcode
-#
 build/
+dist/
 DerivedData/
+*.xcuserstate
+*.xcuserdatad
+xcuserdata/
+*.xcworkspace/xcuserdata/
 *.hmap
 *.ipa
 *.playground.xcworkspace
-xcuserdata/
-
-# Absolute paths
-/Outsight.app/
 
 # macOS
-#
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon storage file
-Icon
-
-# Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created by the OS
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Temporary files
+*.swp
+*.swo
+*~
 
 # Swift Package Manager
-#
 .build/
 .swiftpm/
 
-# Ralph/Gemini
-#
-.ralph/
-.PLAN.md.swp
-GEMINI.md
-ralph.yml
-PROMPT.md
+# Logs
+*.log
+logs/

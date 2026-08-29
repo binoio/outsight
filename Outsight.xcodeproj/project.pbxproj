@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02848F22A1E000000000001 /* UpdaterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01848F22A1E000000000001 /* UpdaterViewModel.swift */; };
+		P04848F22A1E000000000001 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = P05848F22A1E000000000001 /* Sparkle */; };
+		T02848F22A1E000000000001 /* UpdaterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = T01848F22A1E000000000001 /* UpdaterViewModelTests.swift */; };
 		13F0E86B4B8425CC2B5318F7 /* PermissionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0664FAEB1A1D48EEA4A03D /* PermissionsManager.swift */; };
 		149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F008CAEFFF898829FD3281 /* ScreenCaptureKit.framework */; };
 		2061408226C33B6BF46A180F /* PIPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55511CCF5E5067E7E5E3F77 /* PIPManager.swift */; };
@@ -45,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A01848F22A1E000000000001 /* UpdaterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterViewModel.swift; sourceTree = "<group>"; };
+		T01848F22A1E000000000001 /* UpdaterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterViewModelTests.swift; sourceTree = "<group>"; };
 		1E93985E123BB6698FA5C51D /* OutsightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutsightUITests.swift; sourceTree = "<group>"; };
 		2C3CF4A8099BC0E1D40461AE /* OutsightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutsightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DF749A4CCDFB69F0F58DE2 /* CaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureManager.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				P04848F22A1E000000000001 /* Sparkle in Frameworks */,
 				149002F99FD04450994F07DC /* ScreenCaptureKit.framework in Frameworks */,
 				CA46539421BA7286D4CE1643 /* CoreGraphics.framework in Frameworks */,
 				EDBCB9B1BC6116B79C00D2D6 /* AVFoundation.framework in Frameworks */,
@@ -89,6 +95,7 @@
 				633FD658C8B9C9DF53267B28 /* AppIconTests.swift */,
 				502C57EBD1F8F71C52FBB7FC /* PermissionsManagerTests.swift */,
 				6A3359B858392BD876770EC5 /* SidebarViewModelTests.swift */,
+				T01848F22A1E000000000001 /* UpdaterViewModelTests.swift */,
 			);
 			path = OutsightTests;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		56DA45A760356D0F8B94DF08 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A01848F22A1E000000000001 /* UpdaterViewModel.swift */,
 				C8E6B2520145C88929EECE9C /* SidebarViewModel.swift */,
 			);
 			path = ViewModels;
@@ -200,6 +208,7 @@
 			);
 			name = Outsight;
 			packageProductDependencies = (
+				P05848F22A1E000000000001 /* Sparkle */,
 			);
 			productName = Outsight;
 			productReference = 53BFCBF49C520BC0BE2A374B /* Outsight.app */;
@@ -218,6 +227,7 @@
 			);
 			name = OutsightTests;
 			packageProductDependencies = (
+				P05848F22A1E000000000001 /* Sparkle */,
 			);
 			productName = OutsightTests;
 			productReference = 55C75918180273790BA623D8 /* OutsightTests.xctest */;
@@ -264,6 +274,9 @@
 			);
 			mainGroup = 3AD80D8AAE4ADC02EE16B90F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				P06848F22A1E000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 688DC89498E629DE03B7966E /* Products */;
 			projectDirPath = "";
@@ -292,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02848F22A1E000000000001 /* UpdaterViewModel.swift in Sources */,
 				87BC7E2F9E49565AA4090B79 /* AppLoginManager.swift in Sources */,
 				ED2E77235D6B316A39E67A40 /* CaptureManager.swift in Sources */,
 				FE38DCC9946FE88E72E45154 /* CaptureView.swift in Sources */,
@@ -317,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				T02848F22A1E000000000001 /* UpdaterViewModelTests.swift in Sources */,
 				24D16CDBEEFB489196B0E1DE /* AppIconTests.swift in Sources */,
 				A48C403AE0575E4C9F17D13F /* PermissionsManagerTests.swift in Sources */,
 				AC1FEF682FCE990C9808575F /* SidebarViewModelTests.swift in Sources */,
@@ -344,7 +359,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.1.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -361,7 +378,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.1.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +395,8 @@
 		6BABF2328BB00B7FD2CEAF30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.0;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -440,7 +461,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.1.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +478,8 @@
 		94BFD03C5EA6B38DD77A982C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.0;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -512,9 +537,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				INFOPLIST_FILE = Outsight/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ralph.Outsight;
 				SDKROOT = macosx;
 			};
@@ -525,9 +555,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				INFOPLIST_FILE = Outsight/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ralph.Outsight;
 				SDKROOT = macosx;
 			};
@@ -538,7 +573,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.1.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -590,6 +627,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		P06848F22A1E000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		P05848F22A1E000000000001 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = P06848F22A1E000000000001 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB4DED802E7B627E2669F180 /* Project object */;
 }

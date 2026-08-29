@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var permissionsManager: PermissionsManager
+    var updaterViewModel: UpdaterViewModel?
     
     var body: some View {
         TabView {
@@ -14,6 +15,13 @@ struct SettingsView: View {
                 .tabItem {
                     Label("Permissions", systemImage: "lock.shield")
                 }
+            
+            if let updaterViewModel {
+                UpdatesSettingsView(viewModel: updaterViewModel)
+                    .tabItem {
+                        Label("Updates", systemImage: "arrow.triangle.2.circlepath")
+                    }
+            }
         }
         .frame(width: 450, height: 450)
     }

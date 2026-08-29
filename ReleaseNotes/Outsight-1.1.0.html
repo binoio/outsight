@@ -1,0 +1,10 @@
+<h2>Outsight 1.1.0</h2>
+<h3>Automatic updates</h3>
+<ul>
+  <li>Outsight now updates itself via Sparkle. Check manually with <b>Outsight ▸ Check for Updates…</b>, or manage automatic checks and downloads in <b>Settings ▸ Updates</b>.</li>
+</ul>
+<h3>Under the hood</h3>
+<ul>
+  <li>Replaced the ship-it submodule with self-contained build, test, run, and release scripts (<code>Scripts/</code>).</li>
+  <li>App notarization now uses Apple's App Store Connect API (<code>notarytool</code>) with EdDSA-signed Sparkle update appcasts.</li>
+</ul>
